@@ -26,6 +26,9 @@ jobs:
       run: sudo modprobe fuse
       continue-on-error: true
 
+    - name: Version
+      run: rustc --version ; cargo --version
+
     - name: Lint
       run: cargo clippy --all-targets --all-features -- -D warnings
 
